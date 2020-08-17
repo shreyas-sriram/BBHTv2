@@ -775,6 +775,22 @@ echo "${BLUE} done${RESET}"
 echo ""
 sar 1 1 >/dev/null
 
+
+echo "${BLUE} installing gowitness${RESET}"
+go get -u github.com/sensepost/gowitness
+echo "${BLUE} done${RESET}"
+echo ""
+
+
+echo "${BLUE} installing Google Chrome${RESET}"
+cd ~/Tools/
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
+echo "${BLUE} done${RESET}"
+echo ""
+
+
 echo "${GREEN} use the command 'source ~/.bash_profile' for the shell functions to work ${RESET}"
 echo ""
 echo "${GREEN}  ALL THE TOOLS ARE MADE BY THE BEST PEOPLE OF THE INFOSEC COMMUNITY ${RESET}"
