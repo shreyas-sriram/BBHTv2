@@ -453,10 +453,6 @@ echo ""
 sar 1 1 >/dev/null
 
 
-
-
-
-
 echo "${GREEN}#### Downloading Frameworks ####${RESET}"
 #install Sn1per
 echo "${BLUE} Sn1per${RESET}"
@@ -568,7 +564,7 @@ sudo mv hakrawler /usr/bin/
 echo "${BLUE} done${RESET}"
 echo ""
 
-echo "${BLUE} installing waff00f${RESET}"
+echo "${BLUE} installing wafw00f${RESET}"
 git clone https://github.com/EnableSecurity/wafw00f.git ~/tools/waff00f
 cd ~/tools/wafw00f
 sudo python3 setup.py install
@@ -671,6 +667,7 @@ git clone https://github.com/fuzzdb-project/fuzzdb ~/tools/Wordlists/fuzzdb
 git clone https://github.com/1N3/IntruderPayloads ~/tools/Wordlists/IntruderPayloads
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings ~/tools/Wordlists/PayloadsAllTheThings
 git clone https://github.com/danielmiessler/SecLists ~/tools/Wordlists/SecLists
+wget https://raw.githubusercontent.com/BBerastegui/fresh-dns-servers/master/resolvers.txt -O ~/tools/Wordlists/resolvers.txt
 cd ~/tools/Wordlists/SecLists/Discovery/DNS/
 ##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
@@ -787,6 +784,20 @@ cd ~/Tools/
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
+echo "${BLUE} done${RESET}"
+echo ""
+
+
+echo "${BLUE} installing subjack${RESET}"
+go get github.com/haccer/subjack
+echo "${BLUE} done${RESET}"
+echo ""
+
+echo "${BLUE} installing gf-patterns${RESET}"
+git clone https://github.com/1ndianl33t/Gf-Patterns ~/tools/GIT/gf-patterns
+mkdir .gf
+cp ~/tools/GIT/gf-Patterns/*.json ~/.gf
+cp -r $GOPATH/src/github.com/tomnomnom/gf/examples/*.json ~/.gf
 echo "${BLUE} done${RESET}"
 echo ""
 
