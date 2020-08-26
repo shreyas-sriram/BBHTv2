@@ -61,7 +61,7 @@ sar 1 1 >/dev/null
 
 #Setting shell functions/aliases
 echo "${GREEN} [+] Setting bash_profile aliases ${RESET}"
-curl https://raw.githubusercontent.com/unethicalnoob/aliases/master/bashprofile > ~/.bash_profile
+curl https://raw.githubusercontent.com/shreyas-sriram/BBHTv2/master/bashprofile > ~/.bash_profile
 echo "${BLUE} If it doesn't work, set it manually ${RESET}"
 echo ""
 echo ""
