@@ -437,9 +437,11 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE}  GitHound${RESET}"
-git clone https://github.com/tillson/git-hound.git ~/tools/GIT/git-hound
-cd ~/tools/GIT/git-hound
-sudo go build main.go && mv main githound
+cd ~/tools/GIT
+wget https://github.com/tillson/git-hound/releases/download/v1.3/git-hound_1.3_Linux_x86_64.tar.gz
+mkdir git-hound
+tar -xvf git-hound_1.3_Linux_x86_64.tar.gz -C git-hound
+rm git-hound_1.3_Linux_x86_64.tar.gz
 echo "${BLUE} Create a ./config.yml or ~/.githound/config.yml${RESET}"
 echo "${BLUE} done${RESET}"
 echo ""
@@ -560,7 +562,6 @@ echo "${BLUE} installing hakrawler${RESET}"
 git clone https://github.com/hakluke/hakrawler.git ~/tools/hakrawler
 cd ~/tools/hakrawler
 go build main.go && mv main hakrawler
-sudo mv hakrawler /usr/bin/
 echo "${BLUE} done${RESET}"
 echo ""
 
@@ -795,8 +796,8 @@ echo ""
 
 echo "${BLUE} installing gf-patterns${RESET}"
 git clone https://github.com/1ndianl33t/Gf-Patterns ~/tools/GIT/gf-patterns
-mkdir .gf
-cp ~/tools/GIT/gf-Patterns/*.json ~/.gf
+mkdir ~/.gf
+cp ~/tools/GIT/gf-patterns/*.json ~/.gf
 cp -r $GOPATH/src/github.com/tomnomnom/gf/examples/*.json ~/.gf
 echo "${BLUE} done${RESET}"
 echo ""
