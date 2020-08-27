@@ -71,6 +71,6 @@ alias secretfinder="python3 ~/tools/SecretFinder/SecretFinder.py"
 
 alias arjun="python3 ~/tools/Arjun/arjun.py"
 
-alias git-hound"~/tools/GIT/git-hound/git-hound"
+alias git-hound="~/tools/GIT/git-hound/git-hound"
 
 
