@@ -54,6 +54,7 @@ sudo apt-fast install -y nmap phantomjs
 sudo apt-fast install -y gem
 sudo apt-fast install -y perl 
 sudo apt-fast install -y parallel
+sudo apt-fast install -y screen
 pip3 install jsbeautifier
 echo ""
 echo ""
