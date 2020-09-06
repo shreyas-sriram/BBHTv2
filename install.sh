@@ -177,7 +177,9 @@ golangTools() {
 	echo -e "[$GREEN+$RESET] Done."
 
 	echo -e "[$GREEN+$RESET] Installing nuclei.."
-	GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+	cd ~/tools
+	git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/cmd/nuclei/; go build; mv nuclei /usr/local/bin/
+	# GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 	echo -e "[$GREEN+$RESET] Done."
 
 	echo -e "[$GREEN+$RESET] Installing cf-check"
